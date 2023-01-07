@@ -16,11 +16,110 @@
 }
 
 body{
+  display: flex;
+  flex-direction: column;
   font-size: 15px;
   font-family: 'Bebas Neue', cursive;
   font-family: 'League Spartan', sans-serif;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
-.attribution { font-size: 11px; text-align: center; }
+.attribution { 
+  font-size: 11px; 
+  text-align: center;
+  margin-top: 20px;
+}
 
 .attribution a { color: hsl(228, 45%, 44%); }
+
+.container{
+  display: flex;
+  max-width: 1440px;
+  justify-content: center;
+  align-items: center;
+}
+/* Cards headers, para, button */
+.card{
+  padding: 40px;
+  max-width: 300px;
+}
+#sedan.card{
+  border-radius: 10px 0 0 10px;
+}
+#luxury.card{
+  border-radius: 0 10px 10px 0;
+}
+.card h1 {
+  color: var(--Very-light-gray);
+  font-size: 40px;
+  font-weight: 400;
+  margin: 40px 0;
+}
+.card p{
+  color: var(--transparent-white);
+  font-size: 26px;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+/* Buttons */
+.btn{
+  padding: 20px;
+  border: none;
+  height: 55px;
+  width: 150px;
+  border-radius: 27.5px;
+  text-align: center;
+  font-size: 18px;
+  background-color: var(--Very-light-gray);
+}
+.btn.btn-orange{
+  color: var(--bright-orange);
+}
+.btn.btn-orange:hover{
+  background-color: var(--bright-orange);
+  color: var(--Very-light-gray);
+  border: 1px solid white;
+}
+.btn.btn-blue{
+  color: var(--dark-cyan);
+}
+.btn.btn-blue:hover{
+  background-color: var(--dark-cyan);
+  color: var(--Very-light-gray);
+  border: 1px solid white;
+}
+.btn.btn-green{
+  color: var(--very-dark-cyan);
+}
+.btn.btn-green:hover{
+  background-color: var(--very-dark-cyan);
+  color: var(--Very-light-gray);
+  border: 1px solid white;
+}
+/* Background color */
+#sedan{
+  background: var(--bright-orange);
+}
+#suv{
+  background: var(--dark-cyan);
+}
+#luxury{
+  background: var(--very-dark-cyan);
+}
+/* Responsive */
+@media screen and (max-width: 375px) {
+  .container{
+    flex-direction: column;
+    max-width: 375px;
+    margin: 15px;
+    overflow: hidden;
+  }
+  #sedan.card{
+    border-radius: 10px 10px 0 0;
+  }
+  #luxury.card{
+    border-radius: 0 0 10px 10px;
+  }
+}
